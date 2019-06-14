@@ -121,10 +121,11 @@
 			    </div>
 		    </div>
 	    </div>
-		  <div id="explanation">
-		  	<p>This is a demo of saijiki.js - a JavaScript saijki for computational poets and net artists.</p> 
-		  	<p>You can read more about saijki and kigo here or get the repo and incorporate the library into your own work here</p>
-		  </div>
+	  </div>
+	  <div id="explanation">
+	  	<p>This is a demo of saijiki.js: a JavaScript saijki for computational poets and net artists</p>
+	  	<p>There's no mobile version. Will maybe get to that at some point.</p>
+	  	<p class="closing">Read my intro to saijki and kigo | Incorporate the library into your own work</p>
 	  </div>
 	  <div id="links">
 	  	<a href="https://under-construction.club">Under Construction Club</a> |
@@ -547,13 +548,9 @@ body {
 }
 
 #links {
-	width: 100%;
+	margin-top: 40px;
 	font-weight: 100;
 	font-size: 14px;
-	background: #f9edd6;
-	padding: 10px;
-	position: absolute;
-	bottom: 0px;
 }
 
 .vue-treeselect {
@@ -592,6 +589,22 @@ body {
 
 .vue-treeselect__icon vue-treeselect__value-remove {
 	color: #555
+}
+
+#explanation {
+	display: block;
+	width: 980px;
+	font-weight: 100;
+	font-size: 14px;
+	margin: 0 auto;
+
+		p {
+			margin: 0px;
+		}
+
+		.closing {
+			margin-top: 20px;
+		}
 }
 
 
