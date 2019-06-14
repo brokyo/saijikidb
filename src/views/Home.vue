@@ -125,7 +125,7 @@
 	  <div id="explanation">
 	  	<p>This is a demo of saijiki.js: a JavaScript saijki for computational poets and net artists</p>
 	  	<p>There's no mobile version. Will maybe get to that at some point.</p>
-	  	<p class="closing">Read my intro to saijki and kigo | Incorporate the library into your own work</p>
+	  	<p class="closing"><a href="https://medium.com/@brokyo/saijiki-js-%E6%AD%B3%E6%99%82%E8%A8%98-for-net-artists-and-computational-poets-adc93f68eff4?source=friends_link&sk=71dbd25cbcc67361a440ccc9946defa5">Read my intro to saijki and kigo</a> | <a href="https://github.com/brokyo/saijikijs" target="_blank">Incorporate the library into your own work</a></p>
 	  </div>
 	  <div id="links">
 	  	<a href="https://under-construction.club">Under Construction Club</a> |
@@ -135,7 +135,8 @@
 </template>
 
 <script>
-import saijiki from '../saijikijs'
+var saijiki = require('saijikijs')
+
 import Treeselect from '@riophae/vue-treeselect'
 // import the styles
 import '@riophae/vue-treeselect/dist/vue-treeselect.css'
@@ -167,19 +168,19 @@ export default {
 	  			label: 'the earth'
 	  		},
 	  		{
-	  			id: 'the humanity',
+	  			id: 'humanity',
 	  			label: 'the humanity'
 	  		},
 	  		{
-	  			id: 'the observances',
+	  			id: 'observances',
 	  			label: 'the observances'
 	  		},
 	  		{
-	  			id: 'the animals',
+	  			id: 'animals',
 	  			label: 'the animals'
 	  		},
 	  		{
-	  			id: 'the plants',
+	  			id: 'plants',
 	  			label: 'the plants'
 	  		}
   		],
@@ -348,7 +349,7 @@ export default {
   },
   methods: {
   	filterKigo: function(filterObject) {
-  		this.filteredKigo = saijiki.search(filterObject)
+  		this.filteredKigo = saijiki.filter(filterObject)
   	}
   },
   mounted() {
